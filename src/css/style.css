@@ -1,0 +1,116 @@
+html, body{
+	height: 100%;
+}
+
+
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+}
+
+
+h1{
+	margin: 0;
+}
+
+.header{
+	height: 300px;
+	background-color: gold;
+	padding: 20px;
+}
+
+.modal-floating{
+	width: 600px;
+	height: 700px;
+	overflow: hidden ;
+	
+	border-radius: 3px;
+
+	position: relative;
+	left: -270px;
+	top: -320px;
+}
+
+
+.floating-btn{
+	height: 56px;
+	width: 56px;
+
+}
+
+.actual-btn{
+	height: 56px;
+	width: 56px;
+	text-align: center;
+	background-color: gold;
+	border-radius: 50%;
+
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	transition: opacity 0.1s ease-in;
+}
+
+
+.actual-btn i{
+	font-size: 24px;
+	line-height: 56px;
+
+}
+
+.actual-btn-2{
+	height: 56px;
+	width: 56px;
+	background-color: gold;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	top: calc(50% - 30px);
+    left: calc(50% - 30px);
+	transition: all 2s ease-in;
+}
+
+.animation-container {
+	position: fixed;
+	bottom: 30px;
+	width: 100%;
+
+	transition: bottom 2s ease-in;
+}
+
+
+.animation-container.active {
+	bottom: 50%;
+}
+
+.floating-btn {
+  right: 30px;
+  bottom: 0;
+  position: absolute;
+  transition: right 2s ease-out;
+}
+
+
+.floating-btn.active {
+	right: calc(50% - 30px);
+}
+
+
+.floating-btn.active .actual-btn{
+	opacity: 0;
+}
+
+.floating-btn.active .actual-btn-2{
+	width: 1000px;
+	height: 1000px;
+	top: calc(50% - 500px);
+    left: calc(50% - 500px);
+	background-color: white;
+}
+
+
+
+

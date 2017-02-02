@@ -1,0 +1,234 @@
+html, body{
+	height: 100%;
+}
+
+
+body{
+	background-color: #ddd;
+	font-family: 'Space Mono', monospace;
+}
+
+
+h1{
+	margin: 0;
+}
+
+.header{
+	height: 300px;
+	background-color: gold;
+	padding: 20px;
+	margin-bottom: 25px;
+}
+
+
+
+/* Kill the scroll on the body */
+.material-modal-open {
+  overflow: hidden;
+  /* padding-right: 15px;*/ /* It depends on the prototype (has or not the scrollbar) */
+}
+
+.material-transition-container{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 1
+}
+
+
+
+.material-modal-floating{
+	width: 300px;
+	overflow: hidden ;
+
+	border-radius: 3px;
+	transform: translate(-50%,-50%);
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transition: all 0.2s ease-in 0.2s;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0);
+	-moz-box-shadow:    0px 5px 5px 0px rgba(0, 0, 0, 0);
+	box-shadow:         0px 5px 5px 0px rgba(0, 0, 0, 0);
+
+}
+
+.animation-container.active .material-modal-floating{
+	top: calc(50% - 30px);
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.material-modal-body{
+	max-height: 250px;
+	margin-bottom: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;  
+}
+
+.material-modal-content{
+	padding: 20px;
+	opacity: 0;
+	visibility: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+	transition: all 0.2s ease-in 0.3s;
+}
+
+.animation-container.active .material-modal-content{
+	opacity: 1;
+	visibility: visible;
+}
+
+
+.actual-btn{
+	height: 56px;
+	width: 56px;
+	text-align: center;
+	background-color: gold;
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	transition: all 0.1s ease-in;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.actual-btn i{
+	font-size: 24px;
+	line-height: 56px;
+
+}
+
+.animation-container.active .actual-btn{
+	opacity: 0;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0);
+	-moz-box-shadow:    0px 5px 5px 0px rgba(0, 0, 0, 0);
+	box-shadow:         0px 5px 5px 0px rgba(0, 0, 0, 0);
+}
+
+
+.animation-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	transition: top 0.4s ease-in;
+}
+
+
+.animation-container.active {
+	top: calc(50% - 30px);
+	right: 0;
+}
+
+
+
+.floating-btn {
+	height: 56px;
+	width: 56px;
+	right: 30px;
+	top: 30px;
+	position: absolute;
+	transition: right 0.4s ease-out;
+
+}
+
+
+.animation-container.active .floating-btn {
+	right: calc(50% - 28px); /* The width of the button */
+
+}
+/* Try to remove to see to top */
+
+
+.reveal{
+	height: 56px;
+	width: 56px;
+	background-color: gold;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: width 0.4s ease-in, height, 0.4s ease-in,background-color 0.2s ease-in;
+}
+
+.animation-container.active .reveal{
+	width: 1000px;
+	height: 1000px;
+	background-color: white;
+}
+
+
+
+
+.material-modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #000;
+    transition: all 0.2s ease-in;
+}
+
+.animation-container.active .material-modal-backdrop{
+	opacity: .3;
+}
+
+
+/* Go away */
+
+.animation-container.active.go .material-modal-backdrop{
+	opacity: 0;
+}
+
+.animation-container.active.go .material-modal-backdrop{
+	opacity: 0;
+}
+
+.animation-container.active.go {
+	top: 150%;
+}
+
+
+
+.no-anim{
+	 transition: all 0s ease-in !important;
+}
+
+
+.no-anim *{
+	 transition: all 0s ease-in !important;
+}
+
+
+
+@media (min-width: 768px) {
+
+	.material-modal-floating{
+		width: 600px;
+	}
+
+	.material-modal-body{
+		max-height: none;
+	}
+
+
+}
+
+
+
+

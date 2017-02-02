@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transform</title>
+
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Space Mono -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" href="src/css/style-top-right.css">
+
+
+</head>
+
+<body>
+
+
+
+
+<div class="header">
+
+<h1>Contextual Animations</h1>
+
+
+</div>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-8">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		</div>
+		<div class="col-md-4">
+
+		</div>
+
+
+		
+	</div>
+
+</div>
+
+
+
+<div class="material-transition-container">
+
+	<div class="animation-container">
+
+		<div class="material-modal-backdrop"></div>
+		<div class="floating-btn">
+
+			<div class="material-modal-floating">
+	
+				<div class="reveal"></div>
+
+				<div class="material-modal-content">
+					<div class="material-modal-header">
+						 <button type="button" class="close" id="removeFloat">
+						 	<span aria-hidden="true">&times;</span>
+						 </button>
+						<h4>Title</h4>
+					</div>	
+					<div class="material-modal-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>	
+					<div class="material-modal-body">
+						<a class="btn btn-default">Cancel</a>
+						<a class="btn btn-primary" id="floatOk">Ok</a>
+					</div>	
+				</div>	
+			</div>
+
+			<div class="actual-btn" id="floatMe">
+				<i class="material-icons">add</i>
+			</div>
+			
+		</div>
+		
+	</div>
+
+
+
+</div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$('#floatMe').click(function(){
+		$('.animation-container').addClass("active");
+		$('body').addClass("material-modal-open")
+
+	});
+
+	$('#removeFloat').click(closeFloat);
+
+	$('#floatOk').click(closeFloat);
+
+	$('.material-modal-backdrop').click(closeFloat);
+	
+
+	function closeFloat(){
+		$('body').removeClass("material-modal-open")
+		$('.animation-container').addClass("go");
+
+		setTimeout(function(){
+			$('.animation-container').addClass("no-anim");
+			$('.animation-container').removeClass("active");
+			$('.animation-container').removeClass("go");
+		 
+				setTimeout(function(){
+							$('.animation-container').removeClass("no-anim");	
+						}, 1);
+				
+		}, 500);
+	}
+
+
+
+</script>
+
+
+</html>
